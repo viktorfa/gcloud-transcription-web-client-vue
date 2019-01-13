@@ -16,18 +16,18 @@
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <AudioTranscript/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import AudioTranscript from './components/AudioTranscript'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AudioTranscript
   },
   data () {
     return {
