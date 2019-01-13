@@ -1,20 +1,28 @@
-export const readAudioFile = (audioFile) => {
-  const reader = new FileReader();
-
-  return new Promise((resolve, reject) => {
+export const readAudioFile = async (audioFile) => {
+  let reader;
+  try {
+    reader = new FileReader();
     reader.readAsDataURL(audioFile);
+  } catch (error) {
+    return {
+      ok: false,
+      error: {
+        message: error.message
+      }
+    }
+  }
+  return new Promise((resolve, reject) => {
     reader.onloadend = () => {
       resolve({
         ok: true,
-        data: reader.result,
+        data: reader.result
       })
-    }
+    };
     reader.onerror = () => {
       reject({
-        ok: false,
-        error: reader.error,
-      });
-
+        ok: true,
+        error: reader.error
+      })
     }
   })
 }
