@@ -1,0 +1,484 @@
+{
+  "results": [
+    {
+      "alternatives": [
+        {
+          "transcript": "Nordavinden og sola kranglet om Hvem av disse verdens sterkeste du kommer mangoen isen min varm frakk på seg De ble enige om at den som først kunne få mannen til å ta av seg frakken skoene som sterkere enn den andre så blåser Nordavinden Alta markedet men jo mer om blåst Er jo tettere trakk mannen frakken rundt seg og til slutt går Nordavinden og sola skinte Sola fram så godt og varmt og med en gang to mannen av seg frakken Og så måtte Nordavinden innrømme at sola var den sterkeste bli",
+          "confidence": 0.9070631,
+          "words": [
+            {
+              "startTime": "0s",
+              "endTime": "0.700s",
+              "word": "Nordavinden"
+            },
+            {
+              "startTime": "0.700s",
+              "endTime": "0.800s",
+              "word": "og"
+            },
+            {
+              "startTime": "0.800s",
+              "endTime": "1.200s",
+              "word": "sola"
+            },
+            {
+              "startTime": "1.200s",
+              "endTime": "1.300s",
+              "word": "kranglet"
+            },
+            {
+              "startTime": "1.300s",
+              "endTime": "1.800s",
+              "word": "om"
+            },
+            {
+              "startTime": "1.800s",
+              "endTime": "1.800s",
+              "word": "Hvem"
+            },
+            {
+              "startTime": "1.800s",
+              "endTime": "2s",
+              "word": "av"
+            },
+            {
+              "startTime": "2s",
+              "endTime": "2.400s",
+              "word": "disse"
+            },
+            {
+              "startTime": "2.400s",
+              "endTime": "2.700s",
+              "word": "verdens"
+            },
+            {
+              "startTime": "2.700s",
+              "endTime": "3.100s",
+              "word": "sterkeste"
+            },
+            {
+              "startTime": "3.100s",
+              "endTime": "4.600s",
+              "word": "du"
+            },
+            {
+              "startTime": "4.600s",
+              "endTime": "4.900s",
+              "word": "kommer"
+            },
+            {
+              "startTime": "4.900s",
+              "endTime": "5.500s",
+              "word": "mangoen"
+            },
+            {
+              "startTime": "5.500s",
+              "endTime": "5.900s",
+              "word": "isen"
+            },
+            {
+              "startTime": "5.900s",
+              "endTime": "5.900s",
+              "word": "min"
+            },
+            {
+              "startTime": "5.900s",
+              "endTime": "6.100s",
+              "word": "varm"
+            },
+            {
+              "startTime": "6.100s",
+              "endTime": "6.600s",
+              "word": "frakk"
+            },
+            {
+              "startTime": "6.600s",
+              "endTime": "6.800s",
+              "word": "på"
+            },
+            {
+              "startTime": "6.800s",
+              "endTime": "6.900s",
+              "word": "seg"
+            },
+            {
+              "startTime": "6.900s",
+              "endTime": "8s",
+              "word": "De"
+            },
+            {
+              "startTime": "8s",
+              "endTime": "8.100s",
+              "word": "ble"
+            },
+            {
+              "startTime": "8.100s",
+              "endTime": "8.600s",
+              "word": "enige"
+            },
+            {
+              "startTime": "8.600s",
+              "endTime": "8.700s",
+              "word": "om"
+            },
+            {
+              "startTime": "8.700s",
+              "endTime": "8.800s",
+              "word": "at"
+            },
+            {
+              "startTime": "8.800s",
+              "endTime": "9s",
+              "word": "den"
+            },
+            {
+              "startTime": "9s",
+              "endTime": "9.200s",
+              "word": "som"
+            },
+            {
+              "startTime": "9.200s",
+              "endTime": "9.300s",
+              "word": "først"
+            },
+            {
+              "startTime": "9.300s",
+              "endTime": "9.700s",
+              "word": "kunne"
+            },
+            {
+              "startTime": "9.700s",
+              "endTime": "9.900s",
+              "word": "få"
+            },
+            {
+              "startTime": "9.900s",
+              "endTime": "10.100s",
+              "word": "mannen"
+            },
+            {
+              "startTime": "10.100s",
+              "endTime": "10.300s",
+              "word": "til"
+            },
+            {
+              "startTime": "10.300s",
+              "endTime": "10.400s",
+              "word": "å"
+            },
+            {
+              "startTime": "10.400s",
+              "endTime": "10.500s",
+              "word": "ta"
+            },
+            {
+              "startTime": "10.500s",
+              "endTime": "10.600s",
+              "word": "av"
+            },
+            {
+              "startTime": "10.600s",
+              "endTime": "10.800s",
+              "word": "seg"
+            },
+            {
+              "startTime": "10.800s",
+              "endTime": "11s",
+              "word": "frakken"
+            },
+            {
+              "startTime": "11s",
+              "endTime": "12.100s",
+              "word": "skoene"
+            },
+            {
+              "startTime": "12.100s",
+              "endTime": "12.300s",
+              "word": "som"
+            },
+            {
+              "startTime": "12.300s",
+              "endTime": "12.800s",
+              "word": "sterkere"
+            },
+            {
+              "startTime": "12.800s",
+              "endTime": "12.900s",
+              "word": "enn"
+            },
+            {
+              "startTime": "12.900s",
+              "endTime": "13.200s",
+              "word": "den"
+            },
+            {
+              "startTime": "13.200s",
+              "endTime": "13.200s",
+              "word": "andre"
+            },
+            {
+              "startTime": "13.200s",
+              "endTime": "15.200s",
+              "word": "så"
+            },
+            {
+              "startTime": "15.200s",
+              "endTime": "15.600s",
+              "word": "blåser"
+            },
+            {
+              "startTime": "15.600s",
+              "endTime": "16.200s",
+              "word": "Nordavinden"
+            },
+            {
+              "startTime": "16.200s",
+              "endTime": "16.600s",
+              "word": "Alta"
+            },
+            {
+              "startTime": "16.600s",
+              "endTime": "17s",
+              "word": "markedet"
+            },
+            {
+              "startTime": "17s",
+              "endTime": "17.600s",
+              "word": "men"
+            },
+            {
+              "startTime": "17.600s",
+              "endTime": "17.700s",
+              "word": "jo"
+            },
+            {
+              "startTime": "17.700s",
+              "endTime": "17.900s",
+              "word": "mer"
+            },
+            {
+              "startTime": "17.900s",
+              "endTime": "18.100s",
+              "word": "om"
+            },
+            {
+              "startTime": "18.100s",
+              "endTime": "18.500s",
+              "word": "blåst"
+            },
+            {
+              "startTime": "18.500s",
+              "endTime": "18.500s",
+              "word": "Er"
+            },
+            {
+              "startTime": "18.500s",
+              "endTime": "18.800s",
+              "word": "jo"
+            },
+            {
+              "startTime": "18.800s",
+              "endTime": "19s",
+              "word": "tettere"
+            },
+            {
+              "startTime": "19s",
+              "endTime": "19.400s",
+              "word": "trakk"
+            },
+            {
+              "startTime": "19.400s",
+              "endTime": "19.800s",
+              "word": "mannen"
+            },
+            {
+              "startTime": "19.800s",
+              "endTime": "20.300s",
+              "word": "frakken"
+            },
+            {
+              "startTime": "20.300s",
+              "endTime": "20.500s",
+              "word": "rundt"
+            },
+            {
+              "startTime": "20.500s",
+              "endTime": "20.700s",
+              "word": "seg"
+            },
+            {
+              "startTime": "20.700s",
+              "endTime": "20.800s",
+              "word": "og"
+            },
+            {
+              "startTime": "20.800s",
+              "endTime": "21.300s",
+              "word": "til"
+            },
+            {
+              "startTime": "21.300s",
+              "endTime": "21.600s",
+              "word": "slutt"
+            },
+            {
+              "startTime": "21.600s",
+              "endTime": "21.800s",
+              "word": "går"
+            },
+            {
+              "startTime": "21.800s",
+              "endTime": "22.400s",
+              "word": "Nordavinden"
+            },
+            {
+              "startTime": "22.400s",
+              "endTime": "22.400s",
+              "word": "og"
+            },
+            {
+              "startTime": "22.400s",
+              "endTime": "23.800s",
+              "word": "sola"
+            },
+            {
+              "startTime": "23.800s",
+              "endTime": "24.100s",
+              "word": "skinte"
+            },
+            {
+              "startTime": "24.100s",
+              "endTime": "24.600s",
+              "word": "Sola"
+            },
+            {
+              "startTime": "24.600s",
+              "endTime": "24.900s",
+              "word": "fram"
+            },
+            {
+              "startTime": "24.900s",
+              "endTime": "25.100s",
+              "word": "så"
+            },
+            {
+              "startTime": "25.100s",
+              "endTime": "25.300s",
+              "word": "godt"
+            },
+            {
+              "startTime": "25.300s",
+              "endTime": "25.500s",
+              "word": "og"
+            },
+            {
+              "startTime": "25.500s",
+              "endTime": "25.800s",
+              "word": "varmt"
+            },
+            {
+              "startTime": "25.800s",
+              "endTime": "26s",
+              "word": "og"
+            },
+            {
+              "startTime": "26s",
+              "endTime": "26.400s",
+              "word": "med"
+            },
+            {
+              "startTime": "26.400s",
+              "endTime": "26.600s",
+              "word": "en"
+            },
+            {
+              "startTime": "26.600s",
+              "endTime": "26.900s",
+              "word": "gang"
+            },
+            {
+              "startTime": "26.900s",
+              "endTime": "27.100s",
+              "word": "to"
+            },
+            {
+              "startTime": "27.100s",
+              "endTime": "27.500s",
+              "word": "mannen"
+            },
+            {
+              "startTime": "27.500s",
+              "endTime": "27.500s",
+              "word": "av"
+            },
+            {
+              "startTime": "27.500s",
+              "endTime": "27.800s",
+              "word": "seg"
+            },
+            {
+              "startTime": "27.800s",
+              "endTime": "27.900s",
+              "word": "frakken"
+            },
+            {
+              "startTime": "27.900s",
+              "endTime": "28.400s",
+              "word": "Og"
+            },
+            {
+              "startTime": "28.400s",
+              "endTime": "29s",
+              "word": "så"
+            },
+            {
+              "startTime": "29s",
+              "endTime": "29.300s",
+              "word": "måtte"
+            },
+            {
+              "startTime": "29.300s",
+              "endTime": "30s",
+              "word": "Nordavinden"
+            },
+            {
+              "startTime": "30s",
+              "endTime": "30.500s",
+              "word": "innrømme"
+            },
+            {
+              "startTime": "30.500s",
+              "endTime": "30.500s",
+              "word": "at"
+            },
+            {
+              "startTime": "30.500s",
+              "endTime": "31.200s",
+              "word": "sola"
+            },
+            {
+              "startTime": "31.200s",
+              "endTime": "31.400s",
+              "word": "var"
+            },
+            {
+              "startTime": "31.400s",
+              "endTime": "31.600s",
+              "word": "den"
+            },
+            {
+              "startTime": "31.600s",
+              "endTime": "32.200s",
+              "word": "sterkeste"
+            },
+            {
+              "startTime": "32.200s",
+              "endTime": "32.400s",
+              "word": "bli"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
