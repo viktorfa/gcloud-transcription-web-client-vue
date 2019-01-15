@@ -62,8 +62,8 @@ export const actions = {
       commit(transcriptionMutations.setEncodedInputAudio, data)
       commit(transcriptionMutations.setAudioFile, data)
       dispatch(transcriptionActions.SEND_GCLOUD_REQUEST, {
-        encoding: "OGG_OPUS",
-        sampleRateHertz: 48000,
+        encoding: "LINEAR16",
+        sampleRateHertz: 44100,
       })
     } else {
       commit(transcriptionMutations.addMessage, error)
@@ -88,7 +88,8 @@ export const actions = {
       data,
       error,
     } = await audioSpeechToText(audio, { ...defaultConfig,
-      ...config
+      ...config,
+      languageCode: state.selectedLanguage,
     });
     if (ok) {
       commit(transcriptionMutations.setGcloudData, data);

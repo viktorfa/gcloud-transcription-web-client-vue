@@ -1,6 +1,5 @@
 <template>
   <v-layout row wrap>
-    <h1>Audio recorder</h1>
     <v-flex xs12>
       <v-btn v-show="!recorder" @click.native="initalizeRecording" block round color="success" dark>
         <v-icon left>mic</v-icon>Klikk hvis du vil prøve lydopptak
@@ -25,10 +24,19 @@
       >
         <v-icon left>stop</v-icon>Stopp lydopptak
       </v-btn>
-      <v-btn v-show="recorder" @click.native="processRecording" block round color="success" dark>
-        <v-icon left>note</v-icon>Transkriber lydopptak
+      <v-btn
+        v-show="recorder && showTranscribeRecording"
+        @click.native="processRecording"
+        block
+        round
+        color="success"
+        dark
+      >
+        <v-icon left>subject</v-icon>Transkriber lydopptak
       </v-btn>
-      <br>
+      <div class="text-xs-center" v-if="isRecording">
+        <v-progress-circular :value="recordingTimer / 30000 * 100" rotate="270"></v-progress-circular>
+      </div>
     </v-flex>
   </v-layout>
 </template>
@@ -47,6 +55,7 @@ export default {
     return {
       showStartRecording: true,
       showStopRecording: false,
+      showTranscribeRecording: false,
       isRecording: false,
       recorder: null,
       recordingTimer: 30000
@@ -58,29 +67,29 @@ export default {
       if (ok) {
         this.recorder = recorder;
         myRecorder = recorder;
-        myRecorder.ondataavailable = event => {
-          console.log("data available");
-          chunks.push(event.data);
-        };
       } else {
         alert(error.message);
       }
     },
     startRecording() {
-      myRecorder.start();
+      myRecorder.record();
       this.showStartRecording = false;
       this.showStopRecording = true;
+      this.isRecording = true;
       this.startRecordingTimer();
     },
     stopRecording() {
       clearInterval(timer, interval);
       myRecorder.stop();
       this.showStartRecording = true;
+      this.isRecording = false;
+      this.showTranscribeRecording = true;
       this.showStopRecording = false;
     },
     async processRecording() {
-      const { ok, data, error } = await processRecording(myRecorder, chunks);
-      chunks = [];
+      const { ok, data, error } = await processRecording(myRecorder);
+      myRecorder.clear();
+      this.showTranscribeRecording = false;
       if (ok) {
         this.$store.dispatch("HANDLE_RECORDING_INPUT", { audioBlob: data });
       } else {

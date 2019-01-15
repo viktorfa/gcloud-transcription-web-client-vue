@@ -1,9 +1,11 @@
+import '@/contrib/recorder'
+
 export const getAudioRecorder = async () => {
+  const audioContext = new AudioContext();
   try {
-    const audioStream = await navigator.mediaDevices.getUserMedia({
-      audio: true
-    })
-    const recorder = new MediaRecorder(audioStream);
+    const audioStream = await navigator.mediaDevices.getUserMedia({audio: true})
+    const audioInput = audioContext.createMediaStreamSource(audioStream)
+    const recorder = new window.Recorder(audioInput);
     return {
       ok: true,
       data: recorder,
@@ -20,15 +22,13 @@ export const getAudioRecorder = async () => {
   }
 }
 
-export const processRecording = async (recorder, chunks) => {
+export const processRecording = async (recorder) => {
   console.log('processRecording')
   console.log(recorder)
   try {
-    const audioBlob = new Blob(chunks, {
-      type: 'audio/ogg; codecs=opus'
-    })
+    const audioBlob = await getAudioBlob(recorder);
     console.log(audioBlob)
-    const result = URL.createObjectURL(audioBlob) 
+    const result = URL.createObjectURL(audioBlob)
     console.log(result)
     window.audioBlob = audioBlob
     return {
@@ -46,3 +46,5 @@ export const processRecording = async (recorder, chunks) => {
     }
   }
 }
+
+const getAudioBlob = async (recorder) => new Promise((resolve) => recorder.exportWAV(resolve))
