@@ -14,7 +14,7 @@ const defaultConfig = {
 export const audioSpeechToText = async (audio, config) => {
   try {
     if (!audio) throw {
-      msg: 'No audio input',
+      message: 'No audio input',
     }
     const options = {
       body: JSON.stringify({

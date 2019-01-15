@@ -1,5 +1,8 @@
 export const readAudioFile = async (audioFile) => {
   let reader;
+  console.log('readAudioFile')
+  console.log(audioFile)
+  console.log(typeof audioFile)
   try {
     reader = new FileReader();
     reader.readAsDataURL(audioFile);
