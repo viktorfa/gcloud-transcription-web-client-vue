@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "inline-worker": "^1.1.0",
     "vue": "^2.5.21",
     "vue-router": "^3.0.1",
     "vue2-editor": "^2.6.6",

@@ -1,11 +1,15 @@
-import '@/contrib/recorder'
+import Recorder from '@/contrib/recorderjs';
 
 export const getAudioRecorder = async () => {
   const audioContext = new AudioContext();
+  const recorder = new Recorder(audioContext);
   try {
-    const audioStream = await navigator.mediaDevices.getUserMedia({audio: true})
-    const audioInput = audioContext.createMediaStreamSource(audioStream)
-    const recorder = new window.Recorder(audioInput);
+    const audioStream = await navigator.mediaDevices.getUserMedia({
+      audio: true
+    })
+    recorder.init(audioStream, {
+      numChannels: 1
+    })
     return {
       ok: true,
       data: recorder,

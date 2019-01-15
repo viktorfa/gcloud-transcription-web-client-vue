@@ -17,7 +17,7 @@ export default {
         const { id, name } = this.$store.state.selectedAudio;
         return { value: id, text: name };
       },
-      set(newValue, i) {
+      set(newValue) {
         this.$store.dispatch("SET_EXAMPLE_AUDIO", { index: newValue });
       }
     }

@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { mapState } from "vuex";
 import ExampleAudioSelect from "@/components/ExampleAudioSelect";
 import TranscriptEditor from "@/components/TranscriptEditor";
 import AudioFileInput from "@/components/AudioFileInput";

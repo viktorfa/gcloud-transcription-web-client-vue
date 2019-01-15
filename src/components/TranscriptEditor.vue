@@ -30,7 +30,7 @@
 
 <script>
 import { mapState, mapGetters } from "vuex";
-import { VueEditor, Quill } from "vue2-editor";
+import { VueEditor } from "vue2-editor";
 import {
   findWordByCursorIndex,
   isEditTextEvent,

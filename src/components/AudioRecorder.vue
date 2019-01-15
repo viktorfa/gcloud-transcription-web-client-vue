@@ -48,7 +48,6 @@ import { setTimeout, clearInterval } from "timers";
 let interval;
 let timer;
 let myRecorder;
-let chunks = [];
 export default {
   name: "AudioRecorder",
   data() {
@@ -72,7 +71,7 @@ export default {
       }
     },
     startRecording() {
-      myRecorder.record();
+      myRecorder.start();
       this.showStartRecording = false;
       this.showStopRecording = true;
       this.isRecording = true;
@@ -88,7 +87,6 @@ export default {
     },
     async processRecording() {
       const { ok, data, error } = await processRecording(myRecorder);
-      myRecorder.clear();
       this.showTranscribeRecording = false;
       if (ok) {
         this.$store.dispatch("HANDLE_RECORDING_INPUT", { audioBlob: data });
