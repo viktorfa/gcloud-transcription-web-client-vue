@@ -1,5 +1,7 @@
 <template>
-  <input type="file" accept="audio/flac" @change="handleAudioInputChange">
+  <v-input hint="Kun .flac" persistent-hint>
+    <input type="file" label="anus" accept="audio/flac" @change="handleAudioInputChange">
+  </v-input>
 </template>
 
 <script>

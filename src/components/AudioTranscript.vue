@@ -1,23 +1,32 @@
 <template>
   <v-container>
     <Messages/>
-    <AudioRecorder/>
     <ExampleAudioSelect/>
-    <GcloudConfig/>
     <v-layout row wrap class="text-xs-center">
-      <v-flex md6>
+      <v-flex md6 xs12>
         <audio ref="audioElement" :src="audioFile" controls/>
       </v-flex>
-      <v-flex md6>
-        <AudioFileInput/>
-      </v-flex>
+      <v-flex md6></v-flex>
       <v-flex v-if="loading.isLoading" xs12 text-xs-center>
         <v-progress-circular indeterminate></v-progress-circular>
         <p>{{loading.message}}</p>
       </v-flex>
-      <v-layout row wrap>
+      <v-flex xs12>
         <TranscriptEditor :audioPlaybackTime="audioPlaybackTime" :seek="seek"/>
-      </v-layout>
+      </v-flex>
+      <v-btn
+        v-if="!showAudioInput"
+        block
+        flat
+        outline
+        color="info"
+        @click="showAudioInput = !showAudioInput"
+      >Prøv med egne filer eller opptak</v-btn>
+      <div v-if="showAudioInput">
+        <AudioRecorder/>
+        <AudioFileInput/>
+        <GcloudConfig/>
+      </div>
     </v-layout>
   </v-container>
 </template>
@@ -42,7 +51,8 @@ export default {
   },
   data() {
     return {
-      audioPlaybackTime: 0
+      audioPlaybackTime: 0,
+      showAudioInput: false
     };
   },
   computed: {
@@ -55,9 +65,6 @@ export default {
     ])
   },
   methods: {
-    handleCloseMessage(i) {
-      this.$store.commit("removeMessage", i);
-    },
     seek(time) {
       this.$refs.audioElement.currentTime = time;
     }

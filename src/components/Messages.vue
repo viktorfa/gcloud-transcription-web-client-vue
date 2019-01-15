@@ -15,6 +15,11 @@ export default {
   name: "Messages",
   computed: {
     ...mapState(["messages"])
+  },
+  methods: {
+    handleCloseMessage(i) {
+      this.$store.commit("removeMessage", i);
+    }
   }
 };
 </script>

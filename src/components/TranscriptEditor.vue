@@ -1,29 +1,31 @@
 <template>
-  <v-flex xs12>
-    <div>
-      <h3>{{audioPlaybackTime.toFixed(2)}}</h3>
-      <div style="overflow-wrap: break-word;">
-        <span
-          v-for="(word, i) in annotatedWords"
-          :key="i"
-          @click="() => seek(parseFloat(word.startTime))"
-        >
-          <mark v-if="wordIsCurrentTime(word)">{{word.word}}</mark>
-          <span v-else>{{word.word}}</span>
-          <span>&nbsp;</span>
-        </span>
-      </div>
+  <v-layout>
+    <v-flex xs12>
       <div>
-        <vue-editor
-          id="transcript-textarea"
-          v-model="editedTranscriptString"
-          ref="editor"
-          @text-change="handleTextChange"
-          :editorToolbar="[]"
-        />
+        <h3>{{audioPlaybackTime.toFixed(2)}}</h3>
+        <div style="overflow-wrap: break-word;">
+          <span
+            v-for="(word, i) in annotatedWords"
+            :key="i"
+            @click="() => seek(parseFloat(word.startTime))"
+          >
+            <mark v-if="wordIsCurrentTime(word)">{{word.word}}</mark>
+            <span v-else>{{word.word}}</span>
+            <span>&nbsp;</span>
+          </span>
+        </div>
+        <div>
+          <vue-editor
+            id="transcript-textarea"
+            v-model="editedTranscriptString"
+            ref="editor"
+            @text-change="handleTextChange"
+            :editorToolbar="[]"
+          />
+        </div>
       </div>
-    </div>
-  </v-flex>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>

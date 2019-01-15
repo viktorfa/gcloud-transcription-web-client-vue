@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap>
     <v-flex xs12>
-      <v-select :items="languageList" v-model="selectedLanguage"></v-select>
+      <v-select :items="languageList" v-model="selectedLanguage" label="Språk på lydopptak"></v-select>
     </v-flex>
     <v-flex xs12>
       <v-text-field v-model="gcloudApiKey" label="Your Gcloud API key"></v-text-field>
