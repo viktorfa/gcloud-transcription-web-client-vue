@@ -90,7 +90,7 @@ export const actions = {
     } = await audioSpeechToText(audio, { ...defaultConfig,
       ...config,
       languageCode: state.selectedLanguage.value,
-    });
+    }, state.gcloudApiKey);
     if (ok) {
       commit(transcriptionMutations.setGcloudData, data);
       commit(transcriptionMutations.setEditedTranscriptString, data.results[0].alternatives[0].transcript);

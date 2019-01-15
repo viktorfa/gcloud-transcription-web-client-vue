@@ -29,7 +29,7 @@ export const configMutations = {
 export const mutations = {
   [transcriptionMutations.setAudioFile]: getSetterMutation('audioFile'),
   [transcriptionMutations.setSelectedAudio]: getSetterMutation('selectedAudio'),
-  [transcriptionMutations.setGcloudApiKey]: getSetterMutation('gcloudApiKey'),
+  [configMutations.setGcloudApiKey]: getSetterMutation('gcloudApiKey'),
   [transcriptionMutations.setEncodedInputAudio](state, encodedInputAudio) {
     state.encodedInputAudio = encodedInputAudio;
   },
