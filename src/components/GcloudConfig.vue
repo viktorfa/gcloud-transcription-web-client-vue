@@ -29,7 +29,7 @@ export default {
         return this.$store.state.selectedLanguage;
       },
       set(newValue) {
-        this.$store.commit("setSelectedLanguage", newValue);
+        this.$store.commit("setSelectedLanguage", this.languageList.find(({value}) => value === newValue));
       }
     }
   }

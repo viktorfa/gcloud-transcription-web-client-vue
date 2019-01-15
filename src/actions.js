@@ -89,7 +89,7 @@ export const actions = {
       error,
     } = await audioSpeechToText(audio, { ...defaultConfig,
       ...config,
-      languageCode: state.selectedLanguage,
+      languageCode: state.selectedLanguage.value,
     });
     if (ok) {
       commit(transcriptionMutations.setGcloudData, data);
