@@ -30,13 +30,24 @@ export const audioSpeechToText = async (audio, config) => {
     }
     const response = await fetch(`${apiUrl}?key=${gcloudApiKey}`, options)
     if (response.ok) {
-      return {
-        ok: true,
-        data: await response.json(),
+      const data = await response.json();
+      if (data && data.results) {
+        return {
+          ok: true,
+          data,
+        }
       }
-    } else {
-      throw {
-        response
+      return {
+        ok: false,
+        error: {
+          message: 'No response data'
+        }
+      }
+    }
+    return {
+      ok: false,
+      error: {
+        message: response.status
       }
     }
   } catch (error) {

@@ -1,5 +1,6 @@
 import {
   readAudioFile,
+  readAudioBlob,
 } from "./audio";
 import {
   audioSpeechToText,
@@ -11,6 +12,7 @@ import {
 
 export const transcriptionActions = {
   HANDLE_AUDIO_FILE_INPUT: 'HANDLE_AUDIO_FILE_INPUT',
+  HANDLE_RECORDING_INPUT: 'HANDLE_RECORDING_INPUT',
   SEND_GCLOUD_REQUEST: 'SEND_GCLOUD_REQUEST',
   SET_EXAMPLE_AUDIO: 'SET_EXAMPLE_AUDIO',
   READ_AUDIO_FILE: 'READ_AUDIO_FILE',
@@ -39,10 +41,38 @@ export const actions = {
       commit(transcriptionMutations.addMessage, error)
     }
   },
+  async [transcriptionActions.HANDLE_RECORDING_INPUT]({
+    dispatch,
+    commit,
+  }, {
+    audioBlob
+  }) {
+    commit(transcriptionMutations.setLoading, {
+      isLoading: true,
+      message: 'leser lydopptak',
+    });
+    const {
+      ok,
+      data,
+      error
+    } = await readAudioBlob(audioBlob)
+    if (ok) {
+      console.log('data')
+      console.log(data)
+      commit(transcriptionMutations.setEncodedInputAudio, data)
+      commit(transcriptionMutations.setAudioFile, data)
+      dispatch(transcriptionActions.SEND_GCLOUD_REQUEST, {
+        encoding: "OGG_OPUS",
+        sampleRateHertz: 48000,
+      })
+    } else {
+      commit(transcriptionMutations.addMessage, error)
+    }
+  },
   async [transcriptionActions.SEND_GCLOUD_REQUEST]({
     commit,
     state,
-  }) {
+  }, config = {}) {
     commit(transcriptionMutations.setLoading, {
       isLoading: true,
       message: 'transkriberer tale',
@@ -50,14 +80,16 @@ export const actions = {
     const audio = {
       content: state.encodedInputAudio.substring(state.encodedInputAudio.indexOf(",") + 1)
     };
-    const config = {
+    const defaultConfig = {
       encoding: "flac"
     };
     const {
       ok,
       data,
       error,
-    } = await audioSpeechToText(audio, config);
+    } = await audioSpeechToText(audio, { ...defaultConfig,
+      ...config
+    });
     if (ok) {
       commit(transcriptionMutations.setGcloudData, data);
       commit(transcriptionMutations.setEditedTranscriptString, data.results[0].alternatives[0].transcript);

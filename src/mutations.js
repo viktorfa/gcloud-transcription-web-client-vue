@@ -18,7 +18,9 @@ export const transcriptionMutations = {
   setLoading: 'setLoading',
   setSelectedAudio: 'setSelectedAudio',
 }
-
+export const ioMutations = {
+  addAudioOption: 'addAudioOption',
+}
 export const configMutations = {
   setSelectedLanguage: 'setSelectedLanguage',
   setGcloudApiKey: 'setGcloudApiKey',
@@ -40,6 +42,9 @@ export const mutations = {
   },
   [transcriptionMutations.addMessage](state, message) {
     state.messages = [...state.messages, message]
+  },
+  [ioMutations.addAudioOption](state, audioOption) {
+    state.messages = [...state.exampleAudioOptions, audioOption]
   },
   [transcriptionMutations.removeMessage](state, i) {
     state.messages = [...state.messages.splice(i, 1)];

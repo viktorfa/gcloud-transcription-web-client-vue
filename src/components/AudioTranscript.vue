@@ -1,6 +1,7 @@
 <template>
   <v-container>
     <Messages/>
+    <AudioRecorder/>
     <ExampleAudioSelect/>
     <GcloudConfig/>
     <v-layout row wrap class="text-xs-center">
@@ -28,6 +29,7 @@ import TranscriptEditor from "@/components/TranscriptEditor";
 import AudioFileInput from "@/components/AudioFileInput";
 import Messages from "@/components/Messages";
 import GcloudConfig from "@/components/GcloudConfig";
+import AudioRecorder from "@/components/AudioRecorder";
 
 export default {
   components: {
@@ -35,7 +37,8 @@ export default {
     TranscriptEditor,
     AudioFileInput,
     Messages,
-    GcloudConfig
+    GcloudConfig,
+    AudioRecorder
   },
   data() {
     return {
