@@ -1,4 +1,4 @@
-const apiUrl = 'https://speech.googleapis.com/v1/speech:recognize'
+const apiUrl = 'https://speech.googleapis.com/v1p1beta1/speech:recognize'
 
 import {
   gcloudApiKey,
@@ -7,6 +7,8 @@ import {
 
 const defaultConfig = {
   languageCode: defaultLanguage,
+  enableAutomaticPunctuation: true,
+  model: 'default',
   enableWordTimeOffsets: true,
   sampleRateHertz: 44100,
 }
